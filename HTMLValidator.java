@@ -9,9 +9,9 @@ public class HTMLValidator{
         
         for (int i = 0; i < ListHtml.EdListHtml ().size(); i++) 
         {
-            String linhaAtual = ListHtml.EdListHtml().get(i);
-            if (ColectHtml.isTag(linhaAtual)) {
-                if (ColectHtml.identificarFechamentoTag(linhaAtual))
+            String currentline = ListHtml.EdListHtml().get(i);
+            if (ColectHtml.isTag(currentline)) {
+                if (ColectHtml.identificarFechamentoTag(currentline))
                     level--;
                 else
                     level++;                 
@@ -19,7 +19,7 @@ public class HTMLValidator{
             {              
                 level++;
                 if (level > higherLevel) {
-                    text = linhaAtual;
+                    text = currentline;
                     higherLevel = level;
                 }
                 level--;
