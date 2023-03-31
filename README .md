@@ -1,2 +1,37 @@
-Projeto foi inicialmente pensado em utilizar árvore, contudo, não há necessidade visto que não necessita de maior velocidade de processamento.
-O projeto começa com a classe ColectHtml na qual, pega os dados em HTML do site e transforma em TXTl, após, o HTMLValidator, faz a validaçao do HTML, de forma que, pega o ListHTML onde retorna uma lista com todos os dados pego no txt, e percorre indice por indice fazendo a verificação, caso seja uma tag ele entra no if para verificar se tem o fechamento da tag "</", se houver ele diminiu em 1 o level dos dados, caso não tenha ele acrescenta em um. Após, ele verifica se o level é maior que o higherlevel, caso seja, texto recebe a currentline e o higherlevel recebe level, ele verifica se o level é diferente de 1, caso seja, a quantidade de tags não está correta informando o "Malformed HTML".
+
+## Projeto de Análise de HTML
+
+Este projeto consiste em um programa em Java que realiza a análise de um documento HTML, coletando-o de uma URL e validando a sintaxe do seu código.
+  
+## 
+
+
+## Funcionamento
+
+O programa é dividido em diversas classes, cada uma responsável por uma etapa da análise.
+
+
+A classe **ColectHtml** é responsável por coletar o código HTML a partir de uma URL fornecida como parâmetro e transformá-lo em um arquivo de texto para facilitar a análise posterior.
+
+A classe **HTMLValidator** é responsável por validar a sintaxe do código HTML coletado.
+
+A classe **ListHtml** é responsável por transformar o arquivo de texto em uma lista para facilitar a análise.
+
+O programa também conta com a classe **HtmlAnalyzer** que, ao receber uma URL como parâmetro, chama as classes acima para realizar a análise completa do documento HTML.
+ 
+
+## Como usar
+
+O programa pode ser utilizado através do terminal com os seguintes passos:
+  
+
+Compile os arquivos .java através do comando **javac HtmlAnalyzer.java.**
+
+Execute o programa com o comando **java HtmlAnalyzer URL**, onde "**URL**" é a URL do documento HTML a ser analisado.
+
+Caso ocorra algum problema, uma mensagem de erro será exibida na tela informando o ocorrido.
+
+
+## Considerações finais
+
+Este projeto é uma boa opção para quem busca compreender melhor o funcionamento do código HTML e a sua sintaxe. Além disso, ele pode ser utilizado como base para a criação de outras ferramentas de análise e validação de documentos HTML.
